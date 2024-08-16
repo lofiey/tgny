@@ -102,6 +102,17 @@ const FOOTER_INJECT = getEnv(import.meta.env, Astro, 'FOOTER_INJECT')
             <form class="search-form" action="/search/result" method="get">
               <input type="text" name="q" placeholder="Search" />
             </form>
+        <div id="aside-container">
+          <slot name="aside">
+            <div class="nav">
+              <div class="nav-item">
+                <a
+                  href={SITE_URL}
+                  title={channel?.title}
+                  class={`nav-link current`}>elttz@jkah.com</a
+                >
+              </div>
+            </div>
             <div class="copyright-wrap">
               Powered by
               <a
